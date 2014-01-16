@@ -1,9 +1,12 @@
-Git Hooks  
-========
+Git Templates
+=============
 
-Recommended Use
---------------
+Overview
+--------
 
-* Add as a dependency in your project `git submodule add git@github.com:jonmorehouse/git-hooks git-hooks`
-* Manually symlink each git-hook you want to use with your project `ln -s post-merge .git/hooks/post-merge`
+* initialize as template directory
+* to use a hook by default - symlink it to the hooks directory and push
+* all script source goes in scripts directory
+
+
 
