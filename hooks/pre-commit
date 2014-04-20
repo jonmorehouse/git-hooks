@@ -1,5 +1,5 @@
 # call git counter
-../scripts/git_counter.sh
+.git/scripts/git_counter.sh
 
 # update jslib
 if [ -f Cakefile ];then
