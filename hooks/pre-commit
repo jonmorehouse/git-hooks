@@ -3,9 +3,10 @@
 
 # check to see if there is a 
 if [[ -f Cakefile ]]; then 
-  for i in build pre-commit
+  cake=$(cake)
+  for i in pre-commit build
   do
-    if [[ $(cake | grep "$i" | \wc -l) -gt 0 ]]; then
+    if [[ $(echo $cake | grep "$i" | \wc -l) -gt 0 ]]; then
       cake "$i"
     fi
   done
