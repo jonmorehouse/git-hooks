@@ -1,10 +1,13 @@
 # call git counter
 .git/scripts/git_counter.sh
 
-# update jslib
-if [ -f Cakefile ];then
-  cake build
+# check to see if there is a 
+if [[ -f Cakefile ]]; then 
+  for i in build pre-commit
+  do
+    if [[ $(cake | grep "$i" | \wc -l) -gt 0 ]]; then
+      cake "$i"
+    fi
+  done
 fi
-
-# call any other scripts ...
 
