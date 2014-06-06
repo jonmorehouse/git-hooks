@@ -1,5 +1,10 @@
+# vim: set ft=sh:
 # call git counter
 .git/scripts/git_counter.sh
+
+if [[ -f package.json ]];then
+  jsonlint package.json
+fi
 
 # check to see if there is a 
 if [[ -f Cakefile ]]; then 
